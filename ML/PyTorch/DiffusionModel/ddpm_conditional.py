@@ -118,8 +118,8 @@ def launch():
     args.batch_size = 14
     args.image_size = 64
     args.num_classes = 10
-    args.dataset_path = r"C:\Users\dome\datasets\cifar10\cifar10-64\train"
-    args.device = "cuda"
+    args.dataset_path = r"D:\\Kaggle\\cifar-10"
+    args.device = "cpu"
     args.lr = 3e-4
     train(args)
 
