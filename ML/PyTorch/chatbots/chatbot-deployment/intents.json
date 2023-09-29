@@ -1,0 +1,161 @@
+{
+  "intents": [
+      {
+          "tag": "greeting",
+          "patterns": [
+              "Hi",
+              "Hey",
+              "How are you",
+              "Is anyone there?",
+              "Hello",
+              "Good day"
+          ],
+          "responses": [
+              "Hey :-)",
+              "Hello, thanks for visiting",
+              "Hi there, what can I do for you?",
+              "Hi there, how can I help?"
+          ]
+      },
+      {
+          "tag": "goodbye",
+          "patterns": ["Bye", "See you later", "Goodbye"],
+          "responses": [
+              "See you later, thanks for visiting",
+              "Have a nice day",
+              "Bye! Come back again soon."
+          ]
+      },
+      {
+          "tag": "thanks",
+          "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+          "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+          "tag": "items",
+          "patterns": [
+              "Which items do you have?",
+              "What kinds of items are there?",
+              "What do you sell?"
+          ],
+          "responses": [
+              "We sell coffee and tea",
+              "We have coffee and tea"
+          ]
+      },
+      {
+          "tag": "payments",
+          "patterns": [
+              "Do you take credit cards?",
+              "Do you accept Mastercard?",
+              "Can I pay with Paypal?",
+              "Are you cash only?"
+          ],
+          "responses": [
+              "We accept VISA, Mastercard, and Paypal",
+              "We accept most major credit cards and Paypal"
+          ]
+      },
+      {
+          "tag": "delivery",
+          "patterns": [
+              "How long does delivery take?",
+              "How long does shipping take?",
+              "When do I get my delivery?"
+          ],
+          "responses": [
+              "Delivery takes 2-4 days",
+              "Shipping takes 2-4 days"
+          ]
+      },
+      {
+          "tag": "product_info",
+          "patterns": [
+              "Tell me about your tea products",
+              "What types of tea do you offer?",
+              "Give me details about your coffee offerings"
+          ],
+          "responses": [
+              "We offer a wide range of tea products, including black, green, herbal, and specialty teas. Each tea is carefully selected for its unique flavor and aroma.",
+              "Our coffee selection includes various blends, from medium roast to dark roast, as well as single-origin options. We have something for every coffee enthusiast."
+          ]
+      },
+      {
+          "tag": "best_sellers",
+          "patterns": [
+              "What are your best-selling teas?",
+              "Tell me your popular coffee choices"
+          ],
+          "responses": [
+              "Our best-selling teas include our classic black tea and soothing chamomile herbal tea. Customers also love our signature coffee blend for its rich taste.",
+              "Customers often choose our house blend coffee and the aromatic French roast. They're our top picks!"
+          ]
+      },
+      {
+          "tag": "discounts",
+          "patterns": [
+              "Do you offer any discounts?",
+              "Are there any ongoing promotions?"
+          ],
+          "responses": [
+              "Yes, we have special discounts on selected tea and coffee products. You can check our website for the latest promotions and offers.",
+              "Absolutely! We frequently run promotions on our premium blends. Don't miss out on our current discounts."
+          ]
+      },
+      {
+          "tag": "customer_support",
+          "patterns": [
+              "How can I contact customer support?",
+              "I need assistance with my order"
+          ],
+          "responses": [
+              "Our customer support team is here to assist you. You can reach out to us through our website's live chat, email, or phone. We're ready to help!",
+              "If you have any questions or need assistance with your order, please don't hesitate to contact our dedicated customer support team."
+          ]
+      },
+      {
+          "tag": "reviews",
+          "patterns": [
+              "Can you share customer reviews?",
+              "What do customers say about your products?"
+          ],
+          "responses": [
+              "Our customers have shared fantastic reviews about our tea and coffee. You can find authentic reviews on our website to learn about their experiences.",
+              "We're proud to have received positive feedback from our satisfied customers. Check out the reviews section on our website for firsthand testimonials."
+          ]
+      },
+      {
+          "tag": "recommendation",
+          "patterns": [
+              "What tea would you recommend?",
+              "Suggest a coffee blend for me"
+          ],
+          "responses": [
+              "For a soothing experience, we recommend trying our Chamomile Herbal Tea. If you prefer coffee, our House Blend is a great choice for its balanced flavor.",
+              "If you're new to coffee, you might enjoy our Medium Roast Blend. For a bolder taste, go for our French Roast. Enjoy your cup of goodness!"
+          ]
+      },
+      {
+          "tag": "brewing_tips",
+          "patterns": [
+              "How should I brew the perfect cup of tea?",
+              "Give me some coffee brewing tips"
+          ],
+          "responses": [
+              "To brew the perfect cup of tea, use freshly boiled water and steep the tea bag or leaves for the recommended time. Follow our brewing guide on the product label for best results.",
+              "For a delightful cup of coffee, use freshly ground beans, maintain the right water temperature, and consider your preferred brewing method, such as French press or drip. Check our website for detailed brewing tips."
+          ]
+      },
+      {
+          "tag": "organic_products",
+          "patterns": [
+              "Do you offer organic tea or coffee?",
+              "Tell me about your organic options"
+          ],
+          "responses": [
+              "Yes, we have a selection of organic teas and coffees. Our organic products are sourced sustainably and meet the highest quality standards.",
+              "Explore our range of organic options, including organic green tea and single-origin organic coffee beans. We're committed to offering you the finest organic choices."
+          ]
+      }
+  ]
+}
