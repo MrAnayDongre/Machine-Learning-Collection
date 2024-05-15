@@ -1,0 +1,68 @@
+version: "3.8"
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data/pgdata
+
+    # Uncomment the following lines to run ollama in a container
+    # This is not necessary if you are running ollama in a different server or localhost.
+    # In container without GPU can be slow.
+
+    # ollama:
+    #   image: ollama/ollama
+    #   restart: unless-stopped
+    #   volumes:
+    #     - ollama:/root/.ollama
+    # Uncomment the following lines to enable GPU support
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  api:
+    image: localrag:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - 8080:80
+    environment:
+      - PROJECT_NAME=${PROJECT_NAME}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
+      - LLM_MODEL=${LLM_MODEL}
+      # Point to the ollama container
+      # - OLLAMA_SERVER=http://ollama:11434
+      # Point to the ollama server running in the host
+      - OLLAMA_SERVER=http://host.docker.internal:11434
+      - RAG_PROMPT=${RAG_PROMPT}
+      - POSTGRES_SERVER=db
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    depends_on:
+      - db
+      # Uncomment the following line if you are running ollama in a container
+      # - ollama
+
+volumes:
+  ollama:
+  pgdata:

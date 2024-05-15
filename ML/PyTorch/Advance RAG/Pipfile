@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+langchain = "*"
+ipykernel = "*"
+ipywidgets = "*"
+python-dotenv = "*"
+langchain-community = "*"
+wikipedia = "*"
+pgvector = "*"
+psycopg2-binary = "*"
+fastapi = "*"
+pydantic = "*"
+pydantic-settings = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+python-multipart = "*"
+pymupdf = "*"
+chardet = "*"
+selenium = "*"
+unstructured = "*"
+sqlalchemy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+python_full_version = "3.12.2"
