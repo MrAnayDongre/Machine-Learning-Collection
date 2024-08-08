@@ -1,6 +1,6 @@
 # Attention Mechanisms in Seq2Seq Models
 
-This repository contains implementations of Seq2Seq models with Bahdanau and Luong attention mechanisms. The project demonstrates how to build encoder-decoder models with attention mechanisms in PyTorch.
+This folder contains implementations of Seq2Seq models with Bahdanau and Luong attention mechanisms. The project demonstrates how to build encoder-decoder models with attention mechanisms in PyTorch.
 
 ## Table of Contents
 
